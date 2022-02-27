@@ -6,9 +6,19 @@ package _chapter01;
  * @since : 2022/02/27
  */
 public class Bag {
+
   private Long amount;
   private Invitation invitation;
   private Ticket ticket;
+
+  public Bag(long amount) {
+    this(null, amount);
+  }
+
+  public Bag(Invitation invitation, Long amount) {
+    this.amount = amount;
+    this.invitation = invitation;
+  }
 
   public boolean hasInvitation() {
     return invitation != null;

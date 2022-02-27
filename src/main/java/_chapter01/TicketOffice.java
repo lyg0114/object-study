@@ -1,6 +1,5 @@
 package _chapter01;
 
-import com.oracle.tools.packager.Log;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +10,6 @@ import java.util.List;
  * @since : 2022/02/27
  */
 public class TicketOffice {
-
   private Long amount;
   private List<Ticket> tickets = new ArrayList<Ticket>();
 

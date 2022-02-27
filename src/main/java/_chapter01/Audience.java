@@ -6,7 +6,6 @@ package _chapter01;
  * @since : 2022/02/27
  */
 public class Audience {
-
   private Bag bag;
 
   public Audience(Bag bag) {

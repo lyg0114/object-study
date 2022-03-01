@@ -5,9 +5,7 @@ package _chapter02;
  * @package : _chapter02
  * @since : 2022/03/01
  */
-public class DiscountCondition {
+public interface DiscountCondition {
 
-  public boolean isSatisfiedBy(Screening screening) {
-    return false;
-  }
+  boolean isSatisfiedBy(Screening screening);
 }

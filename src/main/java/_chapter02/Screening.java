@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
  * @since : 2022/02/28
  */
 public class Screening {
+
   private Movie movie;
   private int sequence;
   private LocalDateTime whenScreened;
@@ -18,7 +19,7 @@ public class Screening {
     this.whenScreened = whenScreened;
   }
 
-  public Reservation reserve(Customer customer, int audienceCount){
+  public Reservation reserve(Customer customer, int audienceCount) {
     return new Reservation(customer, this, calculateFee(audienceCount), audienceCount);
   }
 

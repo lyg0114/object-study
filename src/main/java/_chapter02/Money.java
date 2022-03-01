@@ -25,6 +25,10 @@ public class Money {
   }
 
   public Money plus(Money amount) {
+    return new Money(this.amount.add(amount.amount));
+  }
+
+  public Money minus(Money amount) {
     return new Money(this.amount.subtract(amount.amount));
   }
 

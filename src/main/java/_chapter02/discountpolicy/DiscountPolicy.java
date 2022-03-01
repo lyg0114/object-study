@@ -1,9 +1,11 @@
-package _chapter02;
+package _chapter02.discountpolicy;
 
+import _chapter02.Money;
+import _chapter02.Screening;
+import _chapter02.discountcondition.DiscountCondition;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import sun.swing.BakedArrayList;
 
 /**
  * @author : iyeong-gyo

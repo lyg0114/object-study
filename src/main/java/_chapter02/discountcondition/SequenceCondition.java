@@ -1,4 +1,6 @@
-package _chapter02;
+package _chapter02.discountcondition;
+
+import _chapter02.Screening;
 
 /**
  * @author : iyeong-gyo

@@ -1,4 +1,8 @@
-package _chapter02;
+package _chapter02.discountpolicy;
+
+import _chapter02.Money;
+import _chapter02.Screening;
+import _chapter02.discountcondition.DiscountCondition;
 
 /**
  * @author : iyeong-gyo

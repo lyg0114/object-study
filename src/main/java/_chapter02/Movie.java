@@ -1,5 +1,6 @@
 package _chapter02;
 
+import _chapter02.discountpolicy.DiscountPolicy;
 import javafx.util.Duration;
 
 /**

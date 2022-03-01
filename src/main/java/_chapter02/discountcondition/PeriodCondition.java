@@ -1,5 +1,6 @@
-package _chapter02;
+package _chapter02.discountcondition;
 
+import _chapter02.Screening;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 

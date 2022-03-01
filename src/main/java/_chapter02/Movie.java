@@ -1,5 +1,7 @@
 package _chapter02;
 
+import javax.management.Query;
+
 /**
  * @author : iyeong-gyo
  * @package : _chapter02
@@ -8,6 +10,10 @@ package _chapter02;
 public class Movie {
 
   public Money getFee() {
+    return null;
+  }
+
+  public Money calculateMovieFee(Screening screening) {
     return null;
   }
 }

@@ -3,6 +3,7 @@ package _chapter02.discountpolicy;
 import _chapter02.Money;
 import _chapter02.Screening;
 import _chapter02.discountcondition.DiscountCondition;
+import lombok.Builder;
 
 /**
  * @author : iyeong-gyo
@@ -13,6 +14,7 @@ public class AmountDiscountPolicy extends DiscountPolicy {
 
   private Money discountAmount;
 
+  @Builder
   public AmountDiscountPolicy(Money discountAmount, DiscountCondition... conditions) {
     super(conditions);
     this.discountAmount = discountAmount;

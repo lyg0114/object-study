@@ -1,6 +1,7 @@
 package _chapter02.discountcondition;
 
 import _chapter02.Screening;
+import lombok.Builder;
 
 /**
  * @author : iyeong-gyo
@@ -11,6 +12,7 @@ public class SequenceCondition implements DiscountCondition {
 
   private int sequence;
 
+  @Builder
   public SequenceCondition(int sequence) {
     this.sequence = sequence;
   }

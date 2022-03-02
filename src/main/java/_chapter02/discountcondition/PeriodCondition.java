@@ -3,6 +3,7 @@ package _chapter02.discountcondition;
 import _chapter02.Screening;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
+import lombok.Builder;
 
 /**
  * @author : iyeong-gyo
@@ -15,6 +16,7 @@ public class PeriodCondition implements DiscountCondition {
   private LocalTime startTime;
   private LocalTime endTime;
 
+  @Builder
   public PeriodCondition(DayOfWeek dayOfWeek, LocalTime startTime, LocalTime endTime) {
     this.dayOfWeek = dayOfWeek;
     this.startTime = startTime;

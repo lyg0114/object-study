@@ -2,6 +2,7 @@ package _chapter02;
 
 import _chapter02.discountpolicy.DiscountPolicy;
 import javafx.util.Duration;
+import lombok.Builder;
 
 /**
  * @author : iyeong-gyo
@@ -15,6 +16,7 @@ public class Movie {
   private Money fee;
   private DiscountPolicy discountPolicy;
 
+  @Builder
   public Movie(String title, Duration runningTime, Money fee, DiscountPolicy discountPolicy) {
     this.title = title;
     this.runningTime = runningTime;

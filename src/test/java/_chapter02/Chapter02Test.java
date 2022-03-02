@@ -4,6 +4,7 @@ import _chapter02.discountcondition.DiscountCondition;
 import _chapter02.discountcondition.PeriodCondition;
 import _chapter02.discountcondition.SequenceCondition;
 import _chapter02.discountpolicy.AmountDiscountPolicy;
+import _chapter02.discountpolicy.NoneDiscountPolicy;
 import _chapter02.discountpolicy.PercentDiscountPolicy;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
@@ -20,6 +21,7 @@ public class Chapter02Test {
 
   Movie avater;
   Movie titanic;
+  Movie satrWars;
 
   @BeforeEach
   public void beforeEach() {
@@ -44,6 +46,13 @@ public class Chapter02Test {
                 .build()
         ).build();
 
+    satrWars = Movie.builder()
+        .title("스타워즈")
+        .runningTime(Duration.minutes(210))
+        .fee(Money.wons(10000))
+        .discountPolicy(
+            NoneDiscountPolicy.builder().build()
+        ).build();
   }
 
   private DiscountCondition[] getDiscountConditionsForAvater() {
@@ -79,6 +88,7 @@ public class Chapter02Test {
   public void calculateDiscount() {
     System.out.println("avater = " + avater);
     System.out.println("titanic = " + titanic);
+    System.out.println("satrWars = " + satrWars);
   }
 
 

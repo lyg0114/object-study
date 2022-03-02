@@ -10,7 +10,7 @@ import lombok.Builder;
  * @package : _chapter02
  * @since : 2022/03/01
  */
-public class PercentDiscountPolicy extends DiscountPolicy {
+public class PercentDiscountPolicy extends DefaultDiscountPolicy {
 
   private double percent;
 

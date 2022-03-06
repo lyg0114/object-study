@@ -3,12 +3,14 @@ package _chapter02;
 import _chapter02.discountpolicy.DiscountPolicy;
 import javafx.util.Duration;
 import lombok.Builder;
+import lombok.Data;
 
 /**
  * @author : iyeong-gyo
  * @package : _chapter02
  * @since : 2022/02/28
  */
+@Data
 public class Movie {
 
   private String title;

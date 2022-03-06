@@ -9,6 +9,7 @@ import _chapter02.discountpolicy.PercentDiscountPolicy;
 import java.time.DayOfWeek;
 import java.time.LocalTime;
 import javafx.util.Duration;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -89,6 +90,14 @@ public class Chapter02Test {
     System.out.println("avater = " + avater);
     System.out.println("titanic = " + titanic);
     System.out.println("satrWars = " + satrWars);
+  }
+
+  @Test
+  public void changeDiscountPolicyTest() {
+    Assertions.assertEquals(avater.getDiscountPolicy().getClass(), AmountDiscountPolicy.class);
+    avater.changeDiscountPolicy(
+        new PercentDiscountPolicy(0.1, SequenceCondition.builder().sequence(1).build()));
+    Assertions.assertEquals(avater.getDiscountPolicy().getClass(), PercentDiscountPolicy.class);
   }
 
 

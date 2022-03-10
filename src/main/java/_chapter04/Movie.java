@@ -1,7 +1,5 @@
 package _chapter04;
 
-import _chapter02.Money;
-import _chapter02.discountcondition.DiscountCondition;
 import java.util.Collections;
 import java.util.List;
 import javafx.util.Duration;
@@ -20,7 +18,7 @@ public class Movie {
 
   private MovieType movieType;
   private Money discountAmount;
-  private Money discountPercent;
+  private double discountPercentt;
 
 
   public void setMovieType(MovieType movieType) {
@@ -31,12 +29,15 @@ public class Movie {
     return fee;
   }
 
-  public void setFee(Money fee) {
-    this.fee = fee;
+  public void setFee(Money fee) { this.fee = fee;
   }
 
   public List<DiscountCondition> getDiscountConditions() {
     return Collections.unmodifiableList(discountConditions);
+  }
+
+  public MovieType getMovieType() {
+    return movieType;
   }
 
   public Money getDiscountAmount() {
@@ -47,7 +48,32 @@ public class Movie {
     this.discountAmount = discountAmount;
   }
 
-  public void setDiscountPercent(Money discountPercent) {
-    this.discountPercent = discountPercent;
+  public void setDiscountPercent(double discountPercent) {
+    this.discountPercentt = discountPercent;
+  }
+
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public Duration getRunningTime() {
+    return runningTime;
+  }
+
+  public void setRunningTime(Duration runningTime) {
+    this.runningTime = runningTime;
+  }
+
+  public void setDiscountConditions(List<DiscountCondition> discountConditions) {
+    this.discountConditions = discountConditions;
+  }
+
+  public double getDiscountPercent() {
+    return discountPercentt;
   }
 }

@@ -22,6 +22,17 @@ public class DiscountCondition {
     return type;
   }
 
+  public boolean isDiscountable(DayOfWeek dayOfWeek, LocalTime time) {
+    if (type != DiscountConditionType.PERIOD) {
+      throw new IllegalArgumentException();
+    }
+
+    return this.dayOfWeek.equals(dayOfWeek) &&
+        this.startTime.compareTo(time) <= 0 &&
+        this.endTime.compareTo(time) >= 0;
+  }
+
+
   public void setType(DiscountConditionType type) {
     this.type = type;
   }
@@ -58,3 +69,4 @@ public class DiscountCondition {
     this.endTime = endTime;
   }
 }
+

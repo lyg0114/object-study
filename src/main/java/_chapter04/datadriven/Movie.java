@@ -1,5 +1,6 @@
 package _chapter04.datadriven;
 
+import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import javafx.util.Duration;
@@ -39,6 +40,22 @@ public class Movie {
       throw new IllegalArgumentException();
     }
     return fee;
+  }
+
+  public boolean isDiscountable(LocalDateTime wheenScreened, int sequence) {
+    for (DiscountCondition condition : discountConditions) {
+      if (condition.getType() == DiscountConditionType.PERIOD) {
+        if(condition.isDiscountable(wheenScreened.getDayOfWeek(), wheenScreened.toLocalTime())){
+          return true;
+        }
+      }
+      else{
+        if(condition.isDiscountable(sequence)){
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
   public void setMovieType(MovieType movieType) {

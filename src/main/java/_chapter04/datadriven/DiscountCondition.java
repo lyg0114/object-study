@@ -32,6 +32,12 @@ public class DiscountCondition {
         this.endTime.compareTo(time) >= 0;
   }
 
+  public boolean isDiscountable(int sequence) {
+    if (type != DiscountConditionType.SEQUENCE) {
+      throw new IllegalArgumentException();
+    }
+    return this.sequence == sequence;
+  }
 
   public void setType(DiscountConditionType type) {
     this.type = type;
@@ -68,5 +74,6 @@ public class DiscountCondition {
   public void setEndTime(LocalTime endTime) {
     this.endTime = endTime;
   }
+
 }
 

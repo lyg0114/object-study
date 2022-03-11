@@ -1,6 +1,4 @@
-package _chapter04;
-
-import java.util.List;
+package _chapter04.datadriven;
 
 /**
  * @author : iyeong-gyo

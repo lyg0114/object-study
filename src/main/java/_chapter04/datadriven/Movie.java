@@ -1,4 +1,4 @@
-package _chapter04;
+package _chapter04.datadriven;
 
 import java.util.Collections;
 import java.util.List;

@@ -1,4 +1,4 @@
-package _chapter04;
+package _chapter04.datadriven;
 
 import java.math.BigDecimal;
 

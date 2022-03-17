@@ -1,12 +1,14 @@
 package _chapter05;
 
 import java.time.LocalDateTime;
+import lombok.Data;
 
 /**
  * @author : iyeong-gyo
  * @package : _chapter05
  * @since : 2022/03/17
  */
+@Data
 public class Screening {
 
   private Movie movie;

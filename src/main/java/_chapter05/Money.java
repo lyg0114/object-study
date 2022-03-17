@@ -1,11 +1,11 @@
-package _chapter02;
+package _chapter05;
 
 import java.math.BigDecimal;
 
 /**
  * @author : iyeong-gyo
- * @package : _chapter02
- * @since : 2022/02/28
+ * @package : _chapter05
+ * @since : 2022/03/17
  */
 public class Money {
 
@@ -44,4 +44,5 @@ public class Money {
   public boolean isGreaterThanOrEqual(Money other) {
     return amount.compareTo(other.amount) >= 0;
   }
+
 }

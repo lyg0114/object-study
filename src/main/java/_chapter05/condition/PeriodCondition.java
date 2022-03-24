@@ -9,7 +9,7 @@ import java.time.LocalTime;
  * @package : _chapter05.condition
  * @since : 2022/03/24
  */
-public class PeriodCondition {
+public class PeriodCondition implements DiscountCondition {
 
   private DayOfWeek dayOfWeek;
   private LocalTime startTime;
@@ -21,7 +21,8 @@ public class PeriodCondition {
     this.endTime = endTime;
   }
 
-  private boolean isSatisfiedBy(Screening screening) {
+  @Override
+  public boolean isSatisfiedBy(Screening screening) {
     return dayOfWeek.equals(screening.getWhenScreened().getDayOfWeek()) &&
         startTime.compareTo(screening.getWhenScreened().toLocalTime()) <= 0 &&
         endTime.compareTo(screening.getWhenScreened().toLocalTime()) >= 0;

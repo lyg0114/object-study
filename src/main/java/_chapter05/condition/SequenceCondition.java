@@ -7,7 +7,7 @@ import _chapter05.Screening;
  * @package : _chapter05.condition
  * @since : 2022/03/24
  */
-public class SequenceCondition {
+public class SequenceCondition implements DiscountCondition {
 
   private int sequence;
 
@@ -15,7 +15,8 @@ public class SequenceCondition {
     this.sequence = sequence;
   }
 
-  private boolean isSatisfiedBy(Screening screening) {
+  @Override
+  public boolean isSatisfiedBy(Screening screening) {
     return sequence == screening.getSequence();
   }
 }
